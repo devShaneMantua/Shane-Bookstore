@@ -1,29 +1,7 @@
 /*==================== GOOGLE FONTS ====================*/
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Libre+Caslon+Text:ital@0;1&family=Montserrat:wght@500;600&display=swap');
 
-/*==================== VARIABLES CSS ====================*/
-/*
- caramel: #daaa63
- title: #2c1810
- background:#f1f3f4
 
-white shadow:#e3e7e9
-background: #f2ebe3
-black: #0d1713
-title: #2c1810
-text: #4f5949
-border:.1rem solid rgba(255,255,255,.3);
-
-brown{
-  dark brown: #100000
-  brown: #986c41
-  light brown: #a7906f
- 
-  light caramel:#e1c792
-}
-*/
-
-/*==================== BASE ====================*/
 
 *{
     font-family:'Montserrat', sans-serif;
@@ -431,7 +409,6 @@ lord-icon{
    background:url("img/library-bg.png") no-repeat;
    background-size: cover;
    background-position:center center;
-   min-height: 100vh;
    overflow: hidden;
 }
 
