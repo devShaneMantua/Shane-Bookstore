@@ -1,0 +1,951 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Libre+Caslon+Text:ital@0;1&family=Montserrat:wght@500;600&display=swap');
+
+/*==================== VARIABLES CSS ====================*/
+/*
+ caramel: #daaa63
+ title: #2c1810
+ background:#f1f3f4
+
+white shadow:#e3e7e9
+background: #f2ebe3
+black: #0d1713
+title: #2c1810
+text: #4f5949
+border:.1rem solid rgba(255,255,255,.3);
+
+brown{
+  dark brown: #100000
+  brown: #986c41
+  light brown: #a7906f
+ 
+  light caramel:#e1c792
+}
+*/
+
+/*==================== BASE ====================*/
+
+*{
+    font-family:'Montserrat', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition:all .2s linear;
+    transition:width none;
+}
+
+html{
+    font-size: 80.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width:.8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:#daaa63;
+    border-radius: 7rem;
+}
+
+body{
+   background: #f1f3f4;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Libre Caslon Text', serif;
+  color: #2c1810;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section{
+   padding: 3rem 3%;
+}
+.h-section {
+  padding: 3rem 7%;
+}
+
+.home{
+  background:url("img/bg.png") no-repeat;
+  background-size:cover;
+  height:100vh;
+  background-position:center;
+  overflow: hidden;
+}
+
+/*==================== NAV ====================*/
+.header {
+  background: #f2ebe3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 3%;
+  box-shadow:rgba(17 17 17 / 15%) 0px 0.5rem 1rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  font-size: 15px;
+}
+.header i{
+   font-size:17px;
+   color: #daaa63;
+}
+
+.header .logo{
+   font-size:17px;
+   color:#2c1810;
+}
+
+.navbar a{
+  margin-left:40px;
+  color: #2c1810;
+}
+
+.navbar a:hover{
+  padding:5px;
+  border-bottom: .2rem solid #daaa63;
+  border-radius:25%;
+  color: #986c41;
+}
+
+.header .icons{
+   margin-left:30px;
+   color: #2c1810;
+}
+.header .icons .fas{
+   margin-left:30px;
+   cursor:pointer;
+   font-size: 17px;
+   
+}
+.header .icons .fas:hover{
+   color: #daaa63;
+}
+#menu-btn{
+   display: none;
+}
+.header .search-form{
+   position: absolute;
+   top:115%; right:7%;
+   background:#fff;
+   display:flex;
+   align-items:center;
+   transform: scaleY(0);
+   transform-origin: top;
+}
+
+.header .search-form.active{
+   transform: scaleY(1);
+}
+
+.header .search-form input{
+   height:100%;
+   width:100%;
+   font-size:1.3rem;
+   color:#0d1713;
+   padding:0.5rem;
+}
+.header .search-form label{
+   cursor:pointer;
+   margin-right: 1.5rem;
+   color:#4f5949;
+}
+.header .search-form label:hover{
+   color:#986c41;
+   margin-left:15px;
+}
+
+
+
+/*==================== HOME ====================*/
+
+
+.home .row{
+   display:flex;
+   align-items:center;
+   flex-wrap:wrap;
+   gap:10rem;
+}
+
+.home .row .content{
+   flex: 1 1 42rem;
+}
+
+h1{
+   font-size:4rem;
+}
+
+
+h1 span{
+   font-family: 'Libre Caslon Text', serif;
+   position: relative;
+}
+
+h1 span:before{
+   content:"";
+   display:block;
+   width:250px;
+   height:7px;
+   background:#100000;
+   border-radius:50px;
+   position:absolute;
+   bottom:0;
+}
+
+.content h2{
+   font-family:'Montserrat', sans-serif;
+   font-size:1.2rem;
+   padding:25px 0;
+   color:#4f5949;
+}
+
+
+.button-flipper{
+   transition: .4s cubic-bezier(.775, .07, .575, .995);
+   transform-style: preserve-3d;
+   position: absolute;
+}
+
+.button-flipper:hover{
+   transform: rotateX(180deg);
+}
+
+.front-button{
+   cursor: pointer;
+   width:15rem;
+   padding:0.9rem 0rem;
+   background-color: #daaa63;
+   border-radius:30px;
+   color: #2c1810;
+   font-size:1.1rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: .1rem;
+   backface-visibility: hidden;
+   z-index: 2;
+   transform: rotateX(0deg);
+   position: absolute;
+   box-shadow: 0px 8px 12px #ccc;
+}
+.front-button i{
+   padding-left: 10px;
+}
+
+.back-button{
+   cursor: pointer;
+   width:15rem;
+   padding:0.9rem 0rem;
+   background-color: #2c1810;
+   border-radius:30px;
+   color: #fff;
+   font-size:1.1rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: .1rem;
+   backface-visibility: hidden;
+   transform: rotateX(-180deg);
+   position: relative;
+   box-shadow: 0px 8px 12px #ccc;
+}
+.back-button i{
+   padding-left:10px;
+}
+
+.b-icon img{
+   position:absolute;
+   right:26rem;
+   bottom:0;
+   height:29rem;
+}
+
+/* Book */
+
+.mybook{
+   height: 70vh;
+   display:flex;
+   justify-content: right;
+   align-items: right;
+   margin:70px 27px;
+}
+.book {
+   position: relative;
+   width: 250px;
+   transition: transform 0.5s;
+}
+
+.paper {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   perspective: 1500px;
+  
+}
+
+.front img{
+   height:100%;
+}
+
+.front,
+.back {
+   background:url("img/bpaper.jpg") no-repeat;
+   background-size:cover;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   transform-origin: left;
+   transition: transform 0.5s;
+}
+
+.front {
+   z-index: 1;
+   backface-visibility: hidden;
+   border: 1px solid #BFBFBF;
+   box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.back {
+   z-index: 0;
+   border: 1px solid #BFBFBF;
+   box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.front-content h4,
+.back-content h4{
+   font-size:1.3rem;
+   color:#4f5949;
+   text-align:center;
+   padding-bottom: 20px;
+}
+
+.front-content,
+.back-content {
+   width: 100%;
+   height: 100%;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+}
+
+lord-icon{
+   margin:auto;
+   width:150px;
+   height:150px;
+}
+
+.back-content .shop-btn{
+   text-align:center;
+   position: absolute;
+   top: 60%;
+   left: 23%;
+   font-family: 'Libre Caslon Text', serif;
+   font-weight: 600;
+   font-size:1.5rem;
+   color: #616161;
+   border:2px solid #616161;
+   padding:0.8rem;
+}
+
+.shop-btn:hover{
+   background: #616161;
+   color:#fff;
+   border-color: #3d3d3d;
+}
+   
+.back-content {
+   transform: rotateY(180deg)
+}
+
+.flipped .front,
+.flipped .back {
+   transform: rotateY(-180deg);
+}
+
+.prev-next  {
+   border: none;
+   background-color: transparent;
+   cursor: pointer;
+   margin:5px;
+   transition: transform 0.5s;
+   
+}
+
+.prev-next p {
+   position:relative;
+   top:-195px;
+   left:-50px;
+   color: #2c1810;
+}
+
+.prev-next i {
+   position:relative;
+   top:-190px;
+   left:-50px;
+   font-size: 45px;
+   color: #2c1810;
+}
+
+.prev-next:focus {
+   outline: none;
+}
+
+.prev-next:hover i {
+   color: #986c41;
+   margin-bottom:10px;
+}
+
+#p1 {
+   z-index: 3;
+}
+
+#p2 {
+   z-index: 2;
+}
+
+#p3 {
+   z-index: 1;
+}
+
+/*==================== BESTSELLER====================*/
+
+.bestseller{
+   background:url("img/library-bg.png") no-repeat;
+   background-size: cover;
+   background-position:center center;
+   min-height: 100vh;
+   overflow: hidden;
+}
+
+.bestseller h2{
+   font-family: 'Libre Baskerville', serif;
+   font-size:3.5rem;
+   color: #2c1810;
+   margin:0rem 3rem;
+}
+
+.bestseller .swiper-container {
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.bestseller .swiper-slide {
+  width: 20rem;
+  height: 29rem;
+}
+
+.bestseller .swiper-slide img {
+  display: block;
+  width: 100%;
+  height:100%;
+}
+
+.img__description {
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+  text-transform: lowercase;
+}
+
+.img__description p{
+   position: absolute;
+   top:-30px;
+   bottom:0;
+   right:0;
+   left:0;
+   font-size:3rem;
+   font-weight: 600;
+   color:#000;
+}
+
+.img__description button{
+   cursor: pointer;
+   font-size:1.6rem;
+   padding:0.7rem 2rem;
+   background: #000;
+   border-radius:25px;
+   color:#fff;
+   margin-bottom: 1rem;
+}
+
+.img__description button:hover{
+   background:#616161;
+   color:#fff;
+}
+
+
+.swiper-slide:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*==================== BOOKS ====================*/
+.books .h-books{
+   text-align: center;
+   margin:2rem 1rem ;
+   position: relative;
+}
+
+.books .h-books::before{
+   content: '';
+   position: absolute;
+   top:50%; left:0;
+   transform: translateY(-50%);
+   width: 100%;
+   height:.01rem;
+   background: rgba(0,0,0,.1);
+   z-index: -1;
+}
+
+.books .h-books span{
+   font-family: 'Libre Caslon Text', serif;
+   color: #2c1810;
+   font-size: 2rem;
+   padding:.5rem 2rem;
+   background: #f1f3f4;
+   border:.1rem solid rgba(0,0,0,.1);
+}
+
+.books .item-slider .box{
+   display:flex;
+   align-items:center;
+   gap:1.5rem;
+   padding:2rem 1rem;
+   border:.1rem solid rgba(0,0,0,.1);
+   margin:1rem 0;
+}
+
+.books .item-slider .box:hover{
+   border: .1rem solid #444;
+   transform: scale(0.9);
+}
+.books .item-slider .box .image img{
+   height:15rem;
+}
+
+.books .item-slider .box .content h3{
+   font-size: 1.2rem;
+   color:#2c1810;
+   padding-top: 15px;
+}
+
+.books .item-slider .box .content p{
+   font-size: .9rem;
+   color:#4f5949;
+   padding-top: 5px;
+   padding-bottom: 10px;
+}
+
+.books .item-slider .box .content .price{
+   font-size:1.6rem;
+   color:#444;
+   padding-bottom:.5rem;
+}
+
+.books .item-slider .box .content .price span{
+   font-size:1.1rem;
+   color:#666;
+   text-decoration: line-through;
+}
+
+.books .item-slider .box .content .stars i{
+   font-size:1.4rem;
+   color:#daaa63;
+}
+
+.books .item-slider .box .content button{
+   cursor: pointer;
+   font-size: .8rem;
+   color: #daaa63;
+   padding:10px;
+   border: 2px solid #daaa63;
+   border-radius: 25px;
+   text-transform: uppercase;
+   font-weight: 600;
+}
+
+.books .item-slider .box .content button:hover{
+   background:#daaa63;
+   color:#2c1810;
+}
+
+
+
+/*==================== FOOTER ====================*/
+
+footer{
+  bottom: 0px;
+  width: 100%;
+  background: #fff;
+  box-shadow:rgba(17 17 17 / 15%) 0px 0.5rem 1rem;
+}
+.main-content{
+  display: flex;
+}
+
+.main-content .box{
+  flex-basis: 50%;
+  padding:2rem 3rem 1.5rem 3rem;
+}
+
+.box h4{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.box .f-logo i{
+   padding-right:7px;
+   color:#daaa63;
+}
+   
+.left .content p{
+  text-align: justify;
+  text-transform: initial;
+  font-size: 1.1rem;
+}
+
+.center .content .fas{
+  font-size: 1.2rem;
+  background: #daaa63;
+  height: 37px;
+  width: 37px;
+  line-height: 37px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.center .content .fas:hover{
+  background: #2c1810;
+  color:#fff;
+}
+
+.center .content .email a, .place a{
+   color:#000;
+}
+
+.center .content .text{
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+
+.email .text{
+  text-transform: lowercase;
+}
+
+.main-content .right{
+  margin:20px 50px;
+  border-radius: 5rem;
+  padding:13px 50px;
+  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.box p{
+   padding: 10px 0px;
+}
+
+.box form .email{
+   width:100%;
+   border-radius: 5rem;
+   border: 0.2rem solid #daaa63;
+   background: none;
+   font-size: 1.2rem;
+   color:#3d3d3d;
+   margin-bottom: 1rem;
+   padding: 1rem 1.2rem;
+}
+
+.box form .subs{
+   background:#daaa63;
+   text-transform: uppercase;
+   padding:6px 15px;
+   cursor: pointer;
+   border-radius: 25px;
+}
+
+.box form .subs:hover{
+   background:#2c1810;
+   color:#fff;
+}
+
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span{
+  color: #656565;
+}
+.bottom center a{
+  color: #fff;
+}
+.bottom center a:hover{
+  text-decoration: underline;
+}
+
+.bottom center i{
+   padding-left:5px;
+}
+
+
+/*==================== MEDIA QUERIES ====================*/
+
+@media (max-width:1260px){
+   .home .row{
+    gap:0rem;
+    }
+    
+   .mybook{
+      margin-right: 0;
+   }
+   
+   .book {
+     width:190px;
+     
+   }
+
+  .paper {
+     height:64vh;
+   }
+   
+   .prev-next p {
+      display:none;
+   }
+   
+   .prev-next i {
+     font-size: 32px;
+     left:-40px;
+   }
+   lord-icon{
+     width: 100px;
+     height: 100px;
+   }
+   
+   .front-content h4,
+   .back-content h4{
+     font-size:15px;
+   }
+   
+   .back-content .shop-btn{
+      left:30px;
+   }
+   
+}
+
+
+@media (max-width:991px){
+    
+   html{
+      font-size:70%;
+   }
+   
+   .header,
+   .header .logo{
+      padding:1rem 2rem;
+      font-size:15px
+   }
+   
+   .header .icons .fas{
+      margin:5px;
+      font-size: 15px;
+   }
+   
+   .header .search-form input{
+     font-size:18px;
+   }
+   
+  .mybook{
+     margin-top:11rem;
+  }
+  .book {
+    width: 190px;
+   }
+
+  .paper {
+     height: 90%;
+   }
+   
+   lord-icon{
+     width: 90px;
+     height: 90px;
+   }
+   
+    .front-content h4,
+    .back-content h4{
+     font-size:11px;
+   }
+   
+   .back-content .shop-btn{
+     left: 40px;
+   }
+   
+   .bestseller .swiper-container {
+    padding-top: 3rem;
+   }
+   
+   footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+  
+}
+@media (max-width:769px){
+
+  #menu-btn{
+     display: inline-block;
+  }
+  .h-section {
+    padding: 10rem 7%;
+  }
+   
+  .header .navbar{
+     position: absolute;
+     top:100%;
+     right:-100%;
+     background: #f2ebe3;
+     width:20rem;
+     height:calc(100vh - 9.5rem);
+  }
+   .header .navbar.active{
+      right:0;
+   }
+  
+  .header .navbar a{
+     display:block;
+     margin:1.5rem;
+     padding:1rem;
+     font-size:2rem;
+  }
+  .header .search-form{
+     width:85%;
+  }
+  .header .search-form input{
+     font-size:15px;
+  }
+  .navbar a:hover{
+    padding-left:20px;
+    border-bottom: .5rem solid;
+    border-radius:25%;
+  }
+  
+  .home .row{
+    display:block;
+    align-items:center;
+    gap:0rem;
+  }
+
+  h1{
+     font-size:30px;
+  }
+  
+  h1 span:before{
+    width:150px;
+    height:4px;
+  }
+
+  .content h2{
+     padding:10px;
+     padding-bottom: 20px;
+     font-size:13px;
+     color: #1c1c1c;
+  }
+  
+  
+  h1 br{
+     display:none;
+  }
+  .mybook{
+     margin-top:50px;
+     margin-right:30px;
+  }
+  .book {
+    width: 148px;
+   }
+
+  .paper {
+     height: 60%;
+   }
+
+   .prev-next i {
+     top:-190px;
+     font-size: 25px;
+   }
+   .front img{
+      width:150px;
+   }
+   .back-content img{
+     height:210px;
+     width:148px;
+   }
+   
+   .back-content .shop-btn{
+       left: 30px;
+       font-size: 13px;
+   }
+   
+   lord-icon{
+     width: 56px;
+     height: 56px;
+   }
+
+
+
+
+@media (max-width:450px){
+   html{
+      font-size: 55.5%;
+   }
+   
+   .header .logo{
+      font-size: 1.5rem;
+   }
+   
+   .mybook{
+      margin-right: 0px;
+  }
+  
+  .bestseller h2{
+     margin-top:2rem;
+  }
+  
+  .bestseller .swiper-container {
+    padding-top: 6rem;
+   }
+   
+   .books .item-slider .box{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+   }
+   
+}
+

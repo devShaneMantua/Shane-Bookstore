@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shane's Bookstore</title>
+    
+    <!--=========== CSS LINK ===========-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+
+    <!--=========== MAIN CSS ===========-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <a href="#" class="logo"><i class="fas fa-book"></i> S-Bookstore</a>
+         <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#bestseller">Bestseller</a>
+            <a href="#books">Books</a>
+            <a href="#contact">Contact</a>
+         </nav>
+         
+         <div class="icons">
+                <div class="fas fa-search" id="search-btn"></div>
+                <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                <div class="fas fa-heart" id="heart-btn"></div>
+                <div class="fas fa-bars" id="menu-btn"></div>
+         </div>
+         <div class="search-form">
+            <input type="search" id="search-box" placeholder="Search Books...">
+            <label for="search-box" class="fas fa-search"></label>
+         </div>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home h-section" id="home">
+        <div class="row">
+           <div class="content">
+              <h1 data-aos="fade-right" data-aos-delay="200">Welcome to <br> <span>Shane Bookstore</span> </h1>
+              <h2 data-aos="fade-right" data-aos-delay="400">We got the best books with the best price.</h2>
+               <a href="#books" data-aos="fade-down" data-aos-delay="1000">
+                  <div class="button-flipper">
+                   <button class="front-button">Explore<i class="fa-solid fa-book-open-reader"></i></button>
+                   <button class="back-button">Books<i class="fa-solid fa-cart-arrow-down"></i></button>
+                  </div>
+               </a>
+               
+           </div>
+           
+        
+           <!-- === BOOK === -->
+           <div class="mybook" data-aos="fade-left" data-aos-delay="800">
+             <div id="book" class="book">
+   
+               <div id="p1" class="paper">
+                   <div class="front">
+                       <img src="img/best-cover.jpg" alt="cover">
+                   </div>
+                   <div class="back">
+                      <div id="b1" class="back-content ">
+                         <img src="img/bpage1.jpg" alt="cover">
+                      </div>
+                   </div>
+               </div>
+         
+               <div id="p2" class="paper">
+                   <div class="front">
+                         <div id="f2" class="front-content">
+                           <img src="img/bpage2.jpg" alt="cover">
+                         </div>
+                   </div>
+                   <div class="back">
+                         <div id="b2" class="back-content">
+                           <lord-icon
+                             src="https://cdn.lordicon.com/jyijxczt.json"
+                             trigger="loop"
+                             colors="primary:#242424,secondary:#daaa63,tertiary:#f2ebe3,quaternary:#2c1810"
+                             >
+                           </lord-icon>
+                           <h4>Free Shipping</h4>
+                           <lord-icon
+                             src="https://cdn.lordicon.com/qmcsqnle.json"
+                             trigger="loop"
+                             colors="primary:#b26836,secondary:#daaa63"
+                            >
+                           </lord-icon>
+                           <h4>Money back guarantee</h4>
+                         </div>
+                   </div>
+               </div>
+               
+               <div id="p3" class="paper">
+                   <div class="front">
+                         <div id="f3" class="front-content">
+                           <lord-icon
+                            src="https://cdn.lordicon.com/xtrjgsiz.json"
+                            trigger="loop"
+                            colors="primary:#2c1810,secondary:#daaa63,tertiary:#2c1810"
+                            >
+                           </lord-icon>
+                           <h4>Secure payment</h4>
+                          <lord-icon
+                              src="https://cdn.lordicon.com/wrwunzmh.json"
+                              trigger="loop"
+                              colors="primary:#2c1810,secondary:#daaa63,tertiary:#ebe6ef"
+                            >
+                           </lord-icon>
+                           <h4>10 days replacement</h4>
+                         </div>
+                   </div>
+                   <div class="back">
+                         <div id="b3" class="back-content">
+                           <a href="#books" class="shop-btn">Shop Now !</a>
+                           <img src="img/back.jpg" alt="cover">
+                         </div>
+                   </div>
+               </div>
+             </div>
+
+             <button class="prev-next" id="prev-btn">
+                <p>back</p>
+                 <i class="fas fa-arrow-circle-left"></i>
+             </button>
+             <button class="prev-next" id="next-btn">
+                 <p>next</p>
+               <i class="fas fa-arrow-circle-right"></i>
+             </button>
+              
+         </div>
+        </div>
+      </section>
+
+      <!--==================== BESTSELLER ====================-->
+      <section class="bestseller section" id="bestseller">
+         <h2>Bestseller</h2>
+         <div class="swiper-container image-slider">
+            <div class="swiper-wrapper">
+               
+               <div class="swiper-slide"><img src="img/bs-1.png" alt="">
+                   <div class="img__description">
+                      <p>₱ 1,715</p>
+                      <button>Add to cart</button>
+                   </div>
+                </div>
+                
+             
+              <div class="swiper-slide"><img src="img/bs-2.png" alt="">
+                 <div class="img__description">
+                    <p>₱ 1,380</p>
+                    <button>Add to cart</button>
+                  </div>
+                </div>
+              <div class="swiper-slide"><img src="img/bs-3.png" alt="">
+                 <div class="img__description">
+                    <p>₱ 936</p>
+                    <button>Add to cart</button>
+                  </div>
+               </div>
+              <div class="swiper-slide"><img src="img/bs-4.png" alt="">
+                 <div class="img__description">
+                    <p>₱ 799</p>
+                    <button>Add to cart</button>
+                  </div>
+               </div>
+              <div class="swiper-slide"><img src="img/bs-5.png" alt="">
+                 <div class="img__description">
+                    <p>₱ 1,300</p>
+                    <button>Add to cart</button>
+                  </div>
+               </div>
+              <div class="swiper-slide"><img src="img/bs-6.png" alt="">
+                 <div class="img__description">
+                    <p>₱ 1,611</p>
+                    <button>Add to cart</button>
+                 </div>
+             </div>
+             <div class="swiper-slide"><img src="img/bs-7.png" alt="">
+                 <div class="img__description">
+                   <p>₱ 1,299</p>
+                   <button>Add to cart</button>
+                  </div>
+             </div>
+             <div class="swiper-slide"><img src="img/bs-8.png" alt="">
+                 <div class="img__description">
+                   <p>₱ 883</p>
+                   <button>Add to cart</button>
+                 </div>
+             </div>
+             <div class="swiper-slide"><img src="img/bs-9.png" alt="">
+                 <div class="img__description">
+                   <p>₱ 1,218</p>
+                   <button>Add to cart</button>
+                 </div>
+             </div>
+           </div>
+         </div>
+      </section>
+      
+      <!--==================== BOOKS ====================-->
+      <section class="books section" id="books">
+         <h2 class="h-books"><span>recommended</span></h2>
+         <div class="swiper item-slider">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/bs-2.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>House of sky and breath</h3>
+                     <p>sarah j. maas</p>
+                     <div class="price">₱ 1,380 <span>₱ 2,050</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/bs-4.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>It Ends With Us </h3>
+                     <p>Colleen Hoover</p>
+                     <div class="price">₱ 799 <span>₱ 883</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/bs-7.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>The maid</h3>
+                     <p>nita prose</p>
+                     <div class="price">₱ 1,299 <span>₱ 1,400</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/bs-3.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>atomic habits</h3>
+                     <p>james clear</p>
+                     <div class="price">₱ 936 <span>₱ 1,020</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/bs-1.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>life force</h3>
+                     <p>tony robbins</p>
+                     <div class="price">₱ 1,715 <span>₱ 1,729</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/bs-5.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>verity</h3>
+                     <p>Colleen Hoover</p>
+                     <div class="price">₱ 1,300<span>₱ 1,798</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+         
+         <h2 class="h-books"><span>New</span></h2>
+         <div class="swiper item-slider">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/book1.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>i hold a wolf by the ears</h3>
+                     <p>laura van den berg</p>
+                     <div class="price">₱ 1,299 <span>₱ 1,466</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/book2.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>the party upstairs</h3>
+                     <p>lee conell</p>
+                     <div class="price">₱ 1,360 <span>₱ 1,695</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/book3.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>clap when you land</h3>
+                     <p>Elizabeth Acevedo</p>
+                     <div class="price">₱ 1,336 <span>₱ 1,619</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/bs-6.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>where the craw dad sing</h3>
+                     <p>delia owens</p>
+                     <div class="price">₱ 1,611 <span>₱1,546 </span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/book6.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>you had me at hola</h3>
+                     <p>alexis daria</p>
+                     <div class="price">₱ 989 <span>₱ 1,100</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+         
+         <h2 class="h-books"><span>other books</span></h2>
+         <div class="swiper item-slider">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/book4.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>red pill</h3>
+                     <p>Hari Kunzru</p>
+                     <div class="price">₱ 1,580 <span>₱ 1,762</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/book5.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>the magical language of others</h3>
+                     <p>E J Koh</p>
+                     <div class="price">₱ 1,415 <span>₱ 1,510</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/book7.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>Over the Woodward Wall</h3>
+                     <p>A. Deborah Baker</p>
+                     <div class="price">₱ 917 <span>₱ 935</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/book8.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>lobizona</h3>
+                     <p>Romina Garber</p>
+                     <div class="price">₱ 1,408 <span>₱ 1,491</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/bs-8.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>ugly love</h3>
+                     <p>colleen hoover</p>
+                     <div class="price">₱ 883 <span>₱ 965</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+               
+               <div class="swiper-slide box">
+                  <div class="image">
+                     <img src="img/bs-9.png" alt="">
+                  </div>
+                  <div class="content">
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <h3>run rose run</h3>
+                     <p>dolly parton and james patterson</p>
+                     <div class="price">₱ 1,218 <span>₱ 1,638</span></div>
+                     <button>Add to cart</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+      </section>
+      </main>
+      
+      <!--==================== FOOTER ====================-->
+      <footer id="contact">
+      <div class="main-content">
+        <div class="left box">
+          <h4 class="f-logo"><i class="fas fa-book"></i>S-Bookstore</h4>
+          <div class="content">
+            <p>This is not a real Bookstore. This website was mainly made for learning and practicing coding. The website was coded and designed by Shane Mantua. To know more about me click my name below.</p>
+          </div>
+        </div>
+        
+        <div class="center box">
+          <h4>Get in touch</h4>
+          <div class="content">
+            <div class="email">
+              <a class="fas fa-envelope"  href="mailto:shanemantua3@gmail.com" target="_blank"></a>
+              <span class="text">shanemantua3@gmail.com</span>
+            </div>
+            <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">09216865290</span>
+            </div>
+            <div class="place">
+              <a class="fas fa-map-marker-alt" href="https://www.google.com/maps/place/Baybay+City,+Leyte/@10.548124,124.9426416,10z/data=!4m5!3m4!1s0x33079910f85e5b5b:0x67ba23baf10004d2!8m2!3d10.6521412!4d124.8525626" target="_blank"></a>
+              <span class="text">Baybay Leyte</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="right box">
+          <h4>newsletter</h3>
+             <p>suscribe for latest update</p>
+             <form action="">
+               <input type="email" name="" placeholder="enter your email..." class="email" id="">
+               <input type="submit" value="subscribe" class="subs">
+             </form>
+        </div>
+      </div>
+      <div class="bottom">
+        <center>
+          <span class="credit">Coded By <a href="https://devshanemantua.github.io/ShaneM-portfolio/" target="_blank">Shane del moira Mantua<i class="fa-solid fa-arrow-pointer"></i></a></span>
+        </center>
+      </div>
+    </footer>
+        
+      <!--==================== JS LINK====================-->
+      <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+      <!--==================== MAIN JS ====================-->
+     <script type="text/javascript" src="main.js"></script>
+        
+</body>
+</html>
