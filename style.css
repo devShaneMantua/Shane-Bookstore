@@ -65,7 +65,6 @@ img {
 .home{
   background:url("img/bg.png") no-repeat;
   background-size:cover;
-  height:100vh;
   background-position:center;
   overflow: hidden;
 }
@@ -259,7 +258,7 @@ h1 span:before{
 /* Book */
 
 .mybook{
-   height: 70vh;
+   height: 410px;
    display:flex;
    justify-content: right;
    align-items: right;
@@ -696,15 +695,7 @@ footer{
     
    .mybook{
       margin-right: 0;
-   }
-   
-   .book {
-     width:190px;
-     
-   }
-
-  .paper {
-     height:64vh;
+      margin-left:20rem;
    }
    
    .prev-next p {
@@ -732,7 +723,7 @@ footer{
 }
 
 
-@media (max-width:991px){
+@media (max-width:1000px){
     
    html{
       font-size:70%;
@@ -756,13 +747,7 @@ footer{
   .mybook{
      margin-top:11rem;
   }
-  .book {
-    width: 190px;
-   }
-
-  .paper {
-     height: 90%;
-   }
+  
    
    lord-icon{
      width: 90px;
@@ -775,7 +760,7 @@ footer{
    }
    
    .back-content .shop-btn{
-     left: 40px;
+     left: 60px;
    }
    
    .bestseller .swiper-container {
@@ -861,15 +846,15 @@ footer{
      display:none;
   }
   .mybook{
-     margin-top:50px;
-     margin-right:30px;
+     margin-top:11rem;
+     margin-left:0rem;
   }
   .book {
     width: 148px;
    }
 
   .paper {
-     height: 60%;
+     height: 55%;
    }
 
    .prev-next i {
