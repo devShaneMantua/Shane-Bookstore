@@ -258,7 +258,7 @@ h1 span:before{
 /* Book */
 
 .mybook{
-   height: 403px;
+   height: 400px;
    display:flex;
    justify-content: right;
    align-items: right;
